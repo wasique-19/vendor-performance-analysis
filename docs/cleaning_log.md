@@ -33,3 +33,5 @@ This log records every data quality problem found in the raw data, what was done
 | 6 | Outliers in quantity (IQR method), negative quantities, `total_amount` vs `quantity x unit_price` | Pending |
 | 7 | Inconsistent vendor names (case, extra spaces, punctuation) | Pending |
 | 8 | Final validation and export to `data/cleaned/` | Pending |
+| 5 | 5 | purchase_orders | Mixed date formats (YYYY-MM-DD and DD-MM-YYYY) | 467 in order_date, 476 in expected_delivery_date | Parsed each format explicitly with `format=` and combined results | Automatic guessing can misread dates like 03-05-2024 |
+| 6 | 5 | purchase_orders, deliveries, vendors | Date columns stored as text | 4 columns | Converted to datetime | Date arithmetic (delivery time, days late) needs real dates |
