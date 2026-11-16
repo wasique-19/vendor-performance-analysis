@@ -52,5 +52,5 @@ This log records every data quality problem found in the raw data, what was done
 
 | Day | Check | Status |
 |-----|-------|--------|
-| 7 | Inconsistent vendor names (case, extra spaces, punctuation) | Pending |
+| 11 | 7 | vendors | Inconsistent vendor names: extra spaces (1), "Pvt." with a dot (1), all lowercase (1), ALL UPPERCASE (1) | 4 | Stripped spaces, standardised suffix to "Pvt Ltd", applied Title Case only to fully upper/lower names, and corrected one brand name (V006) from the vendor master list | `.title()` on every name would damage brand names such as VoltEdge; no duplicate vendors found after normalising |
 | 8 | Final validation and export to `data/cleaned/` | Pending |
