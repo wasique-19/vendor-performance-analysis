@@ -53,4 +53,17 @@ This log records every data quality problem found in the raw data, what was done
 | Day | Check | Status |
 |-----|-------|--------|
 | 11 | 7 | vendors | Inconsistent vendor names: extra spaces (1), "Pvt." with a dot (1), all lowercase (1), ALL UPPERCASE (1) | 4 | Stripped spaces, standardised suffix to "Pvt Ltd", applied Title Case only to fully upper/lower names, and corrected one brand name (V006) from the vendor master list | `.title()` on every name would damage brand names such as VoltEdge; no duplicate vendors found after normalising |
-| 8 | Final validation and export to `data/cleaned/` | Pending |
+## Summary: Raw vs Cleaned
+
+| Metric | Raw | Cleaned |
+|--------|-----|---------|
+| purchase_orders rows | 6,060 | 6,000 |
+| Duplicate rows | 60 | 0 |
+| Missing unit_price | 40 | 0 |
+| Invalid quantities (negative or extreme) | 22 | 0 |
+| Dates stored as text, mixed formats | 4 columns | 0 (all datetime) |
+| Inconsistent vendor names | 4 | 0 |
+| Missing delivery dates | 20 | 20 (cannot be recovered; flagged) |
+| Impossible defective quantities | 10 | 10 (set to missing; flagged) |
+
+All validation checks in `notebooks/03_cleaning.ipynb` pass. Cleaned files are in `data/cleaned/`.

@@ -1,0 +1,21 @@
+product_id,product_name,category,base_price
+P001,Control Board,Electronics,2092
+P002,Sensor Module,Electronics,2545
+P003,Power Adapter,Electronics,1175
+P004,LED Panel,Electronics,1459
+P005,Corrugated Box,Packaging,140
+P006,Bubble Wrap Roll,Packaging,148
+P007,Packing Tape,Packaging,95
+P008,Pallet Wrap,Packaging,78
+P009,Steel Sheet,Raw Materials,716
+P010,Plastic Granules,Raw Materials,1034
+P011,Wood Plank,Raw Materials,1009
+P012,Industrial Resin,Raw Materials,653
+P013,Wooden Pallet,Logistics Supplies,57
+P014,Strapping Band,Logistics Supplies,103
+P015,Safety Label,Logistics Supplies,385
+P016,Cargo Net,Logistics Supplies,196
+P017,A4 Paper Ream,Office Supplies,341
+P018,Printer Cartridge,Office Supplies,333
+P019,Notebook Pack,Office Supplies,491
+P020,Marker Set,Office Supplies,132
